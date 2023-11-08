@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Map;
 
 public class Reader {
-    // stores all the data out of a text file (every line is added in the list, every empty line will be an empty string -> ""
+    // stores all the data out of a text file (every line is added in the list, every empty line will be an empty string -> "")
     List<String> data = new LinkedList<>();
     // the file name/location
     File file;
