@@ -29,3 +29,46 @@ public class Main {
     }
 }
 //part 2
+package org.thehuglio;
+
+import java.io.File;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Objects;
+
+
+public class Main {
+    private static final Reader reader = new Reader(new File("data.txt"));
+
+    public static void main(String[] args) {
+        System.out.println(reader.data);
+        int counter = 0;
+        List<String> charlist = new LinkedList<>();
+        for (char c : reader.data.get(0).toCharArray()) {
+            counter++;
+            charlist.add(0,String.valueOf(c));
+            if (charlist.size() == 15) {
+                charlist.remove(14);
+            }
+            boolean check = true;
+            boolean first = true;
+            for (String c1 : charlist) {
+                first = true;
+                for (String c2 : charlist) {
+                    if (Objects.equals(c1, c2)) {
+                        if (first) {
+                            first = false;
+                        } else {
+                            check = false;
+                            break;
+                        }
+                    }
+                }
+            }
+            if (check && counter > 14) {
+                System.out.println(counter);
+                break;
+            }
+        }
+    }
+}
