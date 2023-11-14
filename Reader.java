@@ -22,7 +22,7 @@ public class Reader {
             LineNumberReader reader = new LineNumberReader(new FileReader(file));
             for(int i = 0;i <= (reader.getLineNumber());i++)
             {
-                data.add(reader.readLine());
+                data.add(reader.readLine().replace(" ",""));
             }
         } catch (Exception e) {
             e.printStackTrace();
