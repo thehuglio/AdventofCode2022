@@ -1,3 +1,4 @@
+//make sure the data has no spaces in front of the text
 package org.thehuglio;
 
 import java.io.File;
