@@ -17,7 +17,7 @@ public class Main {
         System.out.println(reader.data);
         for (int i = 0; i < y; i++) {
             for (int j = 0; j < x; j++) {
-                if (reader.data.get(i).toCharArray()[j] == 'a') {
+                if (reader.data.get(i).toCharArray()[j] == 'a') { // change 'a' to 'S' for part 1
                     hgrid[j][i] = 1;
                     sgrid[j][i] = 1;
                 }else if (reader.data.get(i).toCharArray()[j] == 'E') {
